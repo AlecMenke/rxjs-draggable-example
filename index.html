@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .draggable{
+            transition: transform 0.2s;
+            position: absolute;
+        }
+
+        .dragging{
+            transform: scale(1.2);
+        }
+
+        simple-window{
+            border-radius: 6px;
+            overflow: hidden;
+            height: 200px;
+            width: 180px;
+            background: #559cc0;
+            display: inline-flex;
+            justify-content: center;
+            flex-direction: row;
+        }
+
+        toolbar{
+            flex: 1 0 auto;
+            height: 40px;
+            background: #314468;
+            box-shadow: 0 2px 1px 0 rgba(0,0,0,0.2);
+            text-align: center;
+            position: relative;
+        }
+
+        .vertical{
+            color: #fdf;
+            position: relative;
+            top: 25%;
+            transform: translateY(-50%);
+        }
+
+    </style>
+</head>
+<body>
+<simple-window class="draggable" style="left: 20px; top: 20px;">
+    <toolbar><span class="vertical">My Simple Window</span></toolbar>
+</simple-window>
+<script src="bower_components/rxjs/dist/rx.lite.min.js"></script>
+<script src="draggable.js"></script>
+</body>
+</html>
